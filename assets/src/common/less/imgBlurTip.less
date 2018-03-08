@@ -1,0 +1,45 @@
+#imgBlur_dialog{
+  .weui_mask{
+    z-index: 30;
+  }
+  .weui_dialog{
+    z-index: 40;
+    background: #ffffff;
+    .imgBlur_dialog_hd{
+      padding-top: 20px;
+      text-align: center;
+    }
+    .weui_dialog_bd{
+      padding: 10px 20px 20px 20px;
+      .cart_text_tip{
+        text-align: center;
+        font-size: .32rem;
+        color: #999999;
+        padding-top: .1rem;
+      }
+    }
+
+    .weui_dialog_ft{
+      margin-top: 0;
+      border-top:1px solid #ccc;
+      .weui-btn_primary{
+        width: 49%;
+        height: 1rem;
+        line-height: 1rem;
+        flex: inherit;
+        color: #999;
+        font-size: .32rem;
+        border-right: 1px solid #ccc;
+        border-radius:0;
+        margin: 0;
+        padding: 0;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      &:after{
+        border: none;
+      }
+    }
+  }
+}

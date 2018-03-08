@@ -1,0 +1,235 @@
+/**
+ * 文件说明:
+ * 详细描述: 
+ * 创建者: 
+ * 创建时间: 16/1/30
+ * 变更记录: 
+ */
+
+body{
+	background-color: #f0f0f0;
+	color: #333333;
+	.slider{display:none}/*用于获取更加体验*/
+	.focus span{width:5px;height:5px;margin-right:5px;border-radius:50%;background:#666;font-size:0}
+	.focus span.current{background:#ff7700}
+	.tab{
+		margin-top: 0.2rem;
+		background: #fff;
+		overflow: hidden;
+		.tab_box{
+			width: 92%;
+			margin: .2rem 0rem;
+			margin-left: 4%;
+			padding-bottom: 1.2rem;
+			.tab_title{
+				width: 100%;
+				color: #333333;
+				font-size: .32rem;
+				height: .34rem;
+				line-height: .35rem;
+				border-left:.05rem solid #1eaef4;
+				padding-left: .1rem;
+			}
+			.tab_info{
+				padding: .2rem 0rem 0rem 0rem;
+				p{
+					font-size: .28rem;
+					padding-left: .1rem;
+				}
+				img{
+					width: 100%;
+					margin: .2rem 0rem 0rem 0rem;
+				}
+			}
+		}
+
+	}
+	.tab1{
+		.tab1_top{
+			clear: both;
+			width: 92%;
+			padding: .2rem 0rem;
+			margin-left: 4%;
+			overflow: hidden;
+			strong{
+				float: left;
+				font-size: 0.34rem;
+			}
+			span{
+				float: right;
+				font-size: .2rem;
+				i{
+					font-size: .32rem;
+					clear: both;
+					font-style: normal;
+					color: #ff0000;
+				}
+				span{
+					clear: both;
+					vertical-align: bottom;
+					line-height: .5rem;
+					color:#666666
+				}
+			}
+			.tab1_con{
+				text-align: left;
+				font-size: .28rem;
+				clear: both;
+				color:#333333;
+				padding-top: .1rem;
+			}
+		}
+		.border{
+			border-bottom: .01rem solid #dddddd;
+			margin-left: 4%;
+		}
+		.tab1_list{
+			width: 92%;
+			margin-left: 4%;
+			padding: .2rem 0rem;
+			p{
+				font-size: .28rem;
+				color: #666666;
+				padding-left: .3rem;
+				img{
+					margin-left: -.3rem;
+					margin-right: .16rem;
+					margin-bottom: -.03rem;
+				}
+			}
+		}
+
+	}
+	.footer{
+		width: 100%;
+		height: 1.2rem;
+		background: rgba(0,0,0,.6);
+		text-align: center;
+		overflow: hidden;
+		position: fixed;
+		left: 0px;
+		bottom:0px;
+		a{
+			width: 4.53rem;
+			height: .8rem;
+			font-size: .32rem;
+			color: #ffffff;
+			display: block;
+			line-height: .8rem;
+			margin: 0rem auto;
+			background: #1ebc21;
+			border-radius: .1rem;
+			margin-top: .2rem;
+		}
+	}
+	.tf_wx_dialog{
+		.weui_dialog{
+			background: #fff;
+			.select_calendar{
+				text-align: left;
+				clear: both;
+				overflow: hidden;
+				vertical-align: middle;
+				line-height: .32rem;
+				strong{
+					float: left;
+				}
+				img{
+					&.close{
+						width: .32rem;
+						height: .32rem;
+						float: right;
+					}
+
+				}
+			}
+			.img_style{
+				text-align: center;
+				img{
+					width:1.64rem;
+					height: 2.11rem;
+					margin-left: .6rem;
+					&:first-child{
+						margin-left: -.35rem;
+						width:2.24rem;
+						height: 1.69rem;
+					}
+				}
+			}
+			.jia_box{
+				text-align: center;
+				.weui_cells_checkbox{
+					display: inline-block;
+					margin-top: 0rem;
+					.weui_check_label{
+						&:first-child{
+							margin-right: .5rem;
+						}
+					}
+
+				}
+			}
+
+		}
+		.weui_dialog_ft{
+			margin-top: 0rem;
+			text-align: center;
+			width: 100%;
+			&:after{
+				border: none;
+			}
+			a{
+				width: 3.05rem;
+				height: .8rem;
+				background: #1ebc21;
+				display: block!important;
+				flex: inherit;
+				color: #fff;
+				margin: 0rem auto;
+				margin-bottom: .5rem;
+				font-size: .32rem;
+				border-radius: .1rem;
+			}
+		}
+		.weui_cells{
+			&:before{
+				border: none;
+			}
+			&:after{
+				border: none;
+			}
+		}
+		.weui_check_label{
+			float: left;
+			padding-left: 0rem;
+			padding-right: 0rem;
+			&:before{
+				border: none;
+			}
+			.weui_cell_hd{
+				padding-right: .05rem;
+				.weui_icon_checked{
+					&:before{
+						font-size: .4rem;
+						color: #09bb07;
+					}
+				}
+			}
+			.weui_cell_bd{
+
+				p{
+					font-size: .24rem;
+					span{
+						color: #333333;
+						&.jia{
+							font-size: .28rem;
+							color: #ff0000;
+						}
+
+					}
+				}
+			}
+
+		}
+	}
+}

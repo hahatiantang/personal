@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>时光台历2018</title>
+	<meta name="description" content="时光流影2018狗年台历定制为您打造属于自己的专属定制台历diy，为家人朋友或者宝宝在线制作一本独一无二的个性台历，仅需上传13张照片，多套台历设计模版可供选择，即刻自动排版印刷。更有神奇的炫动台历等您体验！">
+	<meta name="keywords" content="2018年台历,2018狗年台历定制,个性台历设计,宝宝台历diy,台历印刷,台历模板">
+	<script>window.__INITIALSTATE__=<%-JSON.stringify(initialState)%></script>
+	<script>
+		window.wxConfig = {};
+		window.wxConfig=<%-JSON.stringify(initialState.wxConfig || {}) %> ;
+	</script>
+</head>
+<body>
+<div id="app">
+</div>
+<%- LIBJS %>
+<%- SUI_MOBILE_JS %>
+<!-- 微信授权代码 -->
+<%- WECHAT_JS %>
+<!-- 百度统计代码-->
+<%- BAIDU_CODE  %>
+<script src="/calendar/index.entry.js"></script>
+<%- WebViewJS %></body>
+</html>

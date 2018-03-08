@@ -1,0 +1,314 @@
+/**
+ * 文件说明:
+ * 详细描述:
+ * 创建者:
+ * 创建时间: 16/1/30
+ * 变更记录:
+ */
+
+body {
+  background-color: #f0f0f0;
+  color: #333333;
+  .slider {
+    height: 3.35rem;
+    width: 100%;
+    margin: 0 auto 0.2rem;
+    padding: .2rem 0 0.1rem 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: #fff;
+    .swiper-slide {
+      font-size: 1rem;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      .swiper-item {
+        width: 6rem;
+        height: 3rem;
+        position: absolute;
+        top: 0.1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2%;
+      }
+    }
+    .swiper-slide-active {
+      z-index: 99 !important;
+      transform: scale(1.1);
+    }
+  }
+  .focus span {
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #666;
+    font-size: 0
+  }
+  .focus span.current {
+    background: #ff7700
+  }
+  .tab {
+    //margin-top: 0.2rem;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 0.2rem;
+    .tab_box {
+      width: 100%;
+      margin: .28rem 0rem;
+      padding-bottom: 1.2rem;
+      .tab_title {
+        width: 100%;
+        color: #333333;
+        font-size: .32rem;
+        height: .34rem;
+        line-height: .35rem;
+        border-left: .05rem solid #1eaef4;
+        padding-left: 0.25rem;
+      }
+      .tab_info {
+        padding: .12rem 0rem 0rem 0rem;
+        p {
+          font-size: .28rem;
+          padding: 0 0.25rem;
+          color: #333;
+        }
+        img {
+          width: 100%;
+          margin: .16rem 0rem 0rem 0rem;
+        }
+      }
+    }
+
+  }
+  .tabImgBox{
+    width: 100%;
+    .tabImg{
+      width: 100%;
+      display: inherit;
+    }
+  }
+  .tab1 {
+    .tab1_top {
+      clear: both;
+      width: 92%;
+      padding: .2rem 0rem;
+      margin-left: 4%;
+      overflow: hidden;
+      strong {
+        float: left;
+        font-size: 0.34rem;
+      }
+      span {
+        float: right;
+        font-size: .2rem;
+        i {
+          font-size: .32rem;
+          clear: both;
+          font-style: normal;
+          color: #ff0000;
+        }
+        .newTypeI{
+          font-size: .28rem;
+          clear: both;
+          font-style: normal;
+          color: #333;
+        }
+        span {
+          clear: both;
+          vertical-align: bottom;
+          line-height: .5rem;
+          color: #666666
+        }
+      }
+      .tab1_con {
+        text-align: left;
+        font-size: .28rem;
+        clear: both;
+        color: #333333;
+        padding-top: .1rem;
+      }
+    }
+    .border {
+      border-bottom: .01rem solid #dad9d7;
+      margin-left: 4%;
+    }
+    .tab1_list {
+      width: 92%;
+      margin-left: 4%;
+      padding: .2rem 0rem;
+      &:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      p {
+        font-size: .28rem;
+        color: #666666;
+        padding-left: .3rem;
+        img {
+          margin-left: -.3rem;
+          margin-right: .16rem;
+          margin-bottom: -.03rem;
+        }
+      }
+    }
+
+  }
+  .footer {
+    width: 100%;
+    height: 1.2rem;
+    background: rgba(0, 0, 0, .6);
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    a {
+      width: 4.53rem;
+      height: .8rem;
+      font-size: .32rem;
+      color: #ffffff;
+      display: block;
+      line-height: .8rem;
+      margin: 0rem auto;
+      background: #2497f9;
+      border-radius: .1rem;
+      margin-top: .2rem;
+    }
+  }
+
+  .qrCodeBox{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    .qrCodeBoxImg{
+      width: 3.7rem;
+      height: 3.7rem;
+      margin: 0.2rem auto 0;
+      img{
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.2rem;
+        background: #fff;
+      }
+    }
+    .qrCodeBoxFont{
+      text-align: center;
+      margin-top: 0.2rem;
+      font-size: 0.3rem;
+    }
+  }
+
+  .tf_wx_dialog {
+    .weui_dialog {
+      background: #fff;
+      .select_calendar {
+        text-align: left;
+        clear: both;
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: .32rem;
+        strong {
+          float: left;
+        }
+        img {
+          &.close {
+            width: .32rem;
+            height: .32rem;
+            float: right;
+          }
+
+        }
+      }
+      .img_style {
+        text-align: center;
+        margin-left: -.35rem;
+        .img_style_first {
+          width: 2.24rem;
+          height: 1.69rem;
+        }
+        .img_style_sec {
+          width: 1.64rem;
+          height: 2.11rem;
+          margin-left: .6rem;
+        }
+      }
+      .jia_box {
+        text-align: center;
+        .weui_cells_checkbox {
+          display: inline-block;
+          margin-top: 0rem;
+          .weui_check_label {
+            &:first-child {
+              margin-right: .5rem;
+            }
+          }
+
+        }
+      }
+
+    }
+    .weui_dialog_ft {
+      margin-top: 0rem;
+      text-align: center;
+      width: 100%;
+      &:after {
+        border: none;
+      }
+      a {
+        width: 3.05rem;
+        height: .8rem;
+        background: #2497f9;
+        display: block !important;
+        flex: inherit;
+        color: #fff;
+        margin: 0rem auto;
+        margin-bottom: .5rem;
+        font-size: .32rem;
+        border-radius: .1rem;
+      }
+    }
+    .weui_cells {
+      &:before {
+        border: none;
+      }
+      &:after {
+        border: none;
+      }
+    }
+    .weui_check_label {
+      float: left;
+      padding-left: 0rem;
+      padding-right: 0rem;
+      &:before {
+        border: none;
+      }
+      .weui_cell_hd {
+        padding-right: .05rem;
+        .weui_icon_checked {
+          &:before {
+            font-size: .4rem;
+            color: #2497f9;
+          }
+        }
+      }
+      .weui_cell_bd {
+
+        p {
+          font-size: .24rem;
+          span {
+            color: #333333;
+            &.jia {
+              font-size: .28rem;
+              color: #ff0000;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}

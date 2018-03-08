@@ -1,0 +1,191 @@
+.memoryList{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  bottom: 0;
+  background-color: #f0f0f0;
+  .memoryListHead{
+    width: 100%;
+    height: 1rem;
+    color: #333;
+    box-shadow: 0 1px 0 0 #aeaeae;
+    .memoryList_back{
+      font-size: .32rem;
+      float: left;
+      line-height: 1rem;
+      img{
+        border: none;
+        outline: none;
+        height: .39rem;
+        width: .23rem;
+        vertical-align: text-bottom;
+        padding:0 .28rem 0 .2rem;
+      }
+    }
+    p{
+      font-size: .36rem;
+      margin-left: 0.88rem;
+      float: left;
+      line-height: 1rem;
+    }
+  }
+  .memoryListBox{
+    width: 100%;
+    margin-top: .2rem;
+    overflow-y: auto;
+    max-height: 9.4rem;
+    ul{
+      list-style: none;
+      .memoryListLi{
+        margin-bottom: .2rem;
+        height: 1.4rem;
+        background: #fff;
+        box-shadow: 0 1px 0 0 #e0e0e0;
+        .memoryListLiBox{
+          font-size: .28rem;
+          color: #333;
+          float: left;
+          p{
+            line-height: 0.5rem;
+            font-size: .28rem;
+            margin-left: .2rem;
+          }
+          .memoryListLiIntro{
+            margin-top: .25rem;
+            font-weight:bold;
+          }
+        }
+        .memoryListLiEdit{
+          float: right;
+          line-height: 0.5rem;
+          font-size: .28rem;
+          margin-right: .2rem;
+          color: #2497f9;
+          margin-top: .25rem;
+        }
+      }
+      .memoryListLie{
+        margin-bottom: .2rem;
+        height: 2.3rem;
+        color: #333;
+        background: #fff;
+        box-shadow: 0 1px 0 0 #e0e0e0;
+        .memoryListLiBoxE{
+          height: 100%;
+          font-size: .28rem;
+          float: left;
+          .memoryListInBox{
+            margin-top: .3rem;
+            width: 5.8rem;
+            .memoryListTitle{
+              text-align: left;
+              display: inline-block;
+              margin-left: .27rem;
+            }
+            .memoryListIn{
+              width: 4rem;
+              height: .7rem;
+              margin-left: .1rem;
+              border: 1px solid #ccc;
+              border-radius: .05rem;
+              outline: none;
+              cursor: pointer;
+              padding-left: .1rem;
+              font-size: .28rem;
+            }
+          }
+          .memoryListSBox{
+            margin-top: .3rem;
+            width: 5.8rem;
+            .memoryListTime{
+              text-align: left;
+              display: inline-block;
+              margin-left: .27rem;
+            }
+            select {
+              /*很关键：将默认的select选择框样式清除*/
+              appearance:none;
+              -moz-appearance:none;
+              -webkit-appearance:none;
+              /*在选择框的最右侧中间显示小箭头图片*/
+              background: url("../images/arrowDrop.png") no-repeat scroll 92% center transparent;
+              background-size: .22rem .13rem;
+              /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+              padding-right: 14px;
+            }
+            /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+            select::-ms-expand { display: none; }
+            .memoryListS{
+              width: 2rem;
+              height: .7rem;
+              margin-left: .1rem;
+              border: 1px solid #ccc;
+              border-radius: .05rem;
+              outline: none;
+              cursor: pointer;
+              padding-left: .1rem;
+              font-size: .28rem;
+              &[disabled] {
+                color: #333;
+              }
+            }
+            .memoryList_S{
+              width: 2rem;
+              height: .7rem;
+              margin-left: .1rem;
+              border: 1px solid #ccc;
+              border-radius: .05rem;
+              outline: none;
+              cursor: pointer;
+              padding-left: .2rem;
+              font-size: .28rem;
+            }
+          }
+        }
+        .memoryListDel{
+          height: 100%;
+          width: 1.2rem;
+          float: right;
+          border: none;
+          outline: none;
+          background: #ff3333 url("../images/delBox.png") center center no-repeat;
+          background-size: .37rem .4rem;
+        }
+      }
+    }
+  }
+  .memoryListBtnBox{
+    width: 100%;
+    height: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    font-size: 0px;
+    text-align: center;
+    background: #606060;
+    button{
+      margin-left: .22rem;
+      margin-top: .2rem;
+      color: #fff;
+      font-size: .32rem;
+      border:none;
+      border-radius: .1rem;
+      outline:none;
+      &.memoryList_btn{
+        width: 2.96rem;
+        height: .78rem;
+        border: 2px solid #2497f9;
+        background: #2497f9;
+      }
+      &.memoryList_save{
+        width: 2.96rem;
+        height: .78rem;
+        border: 2px solid #2497f9;
+        background: transparent;
+      }
+      &:first-child{
+        margin-left: 0rem;
+      }
+    }
+  }
+}

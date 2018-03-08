@@ -1,0 +1,102 @@
+
+.editLayout{
+  padding-top:0.5rem;
+  .editBox{
+    #ecit_text_dialog{
+      .weui_mask{
+        z-index: 30;
+      }
+      .weui_dialog{
+        z-index: 40;
+        background: #ffffff;
+        .weui_dialog_bd{
+          padding: 0px;
+        }
+        .weui-cell__bd{
+          textarea{
+            width: 100%;
+            border: 1px solid #cccccc;
+            padding: .05rem;
+
+          }
+          .text_tip{
+            text-align: left;
+            font-size: .24rem;
+            color: #999999;
+            padding-top: .1rem;
+            padding-left: 5%;
+          }
+        }
+        .weui_dialog_ft{
+          .weui-btn_primary{
+            width: 3.05rem;
+            height: .8rem;
+            background: #1ebc21;
+            display: block;
+            flex: inherit;
+            color: #fff;
+            margin: 0rem auto;
+            margin-bottom: .5rem;
+            font-size: .32rem;
+            border-radius: .1rem;
+
+          }
+          &:after{
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .editButton{
+    width:100%;
+    height:1.4rem;
+    line-height:1.4rem;
+    position:fixed;
+    bottom:0;
+    background-color:#fff;
+    .editBook{
+      width:1.8rem;
+      height:0.8rem;
+      border:1px #c3c3c3 solid;
+      border-radius:5px;
+      line-height:0.8rem;
+      text-align:center;
+      font-size:0.3rem;
+      float:left;
+      margin-left: 0.3rem;
+      margin-top: 0.35rem;
+    }
+    .pageShow{
+      width:1.8rem;
+      height:0.8rem;
+      border:1px #fff solid;
+      line-height:0.8rem;
+      text-align:center;
+      font-size:0.35rem;
+      float:left;
+      margin-top: 0.35rem;
+      margin-left: 0.5rem;
+    }
+    .publish{
+      width:1.8rem;
+      height:0.8rem;
+      background-color:#1ebc21;
+      color:#fff;
+      border-radius:5px;
+      line-height:0.8rem;
+      text-align:center;
+      font-size:0.3rem;
+      float: right;
+      margin-right: 0.3rem;
+      margin-top: 0.35rem;
+    }
+  }
+  .openFg{
+    display:block;
+  }
+  .closeFg{
+    display:none;
+  }
+
+}

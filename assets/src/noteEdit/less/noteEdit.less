@@ -1,0 +1,634 @@
+/**
+ * 文件说明:记事本编辑页面 less
+ * 详细描述:
+ * 创建者: 邵纪昊
+ * 创建时间: 2016/11/11
+ * 变更记录:
+ */
+body{ margin: 0; padding: 0;}
+ul,li{ margin: 0; padding: 0; list-style: none }
+.noteEditBox{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url("../images/noteEditBox_bg.jpg") no-repeat center;
+  background-size: cover;
+
+  /*头部样式*/
+  .NoteEditHead{
+    width: 6.95rem;
+    height: 0.72rem;
+    margin: 0.3rem auto;
+    ul{
+      li{
+        width: 2.0rem;
+        padding-right: 0.2rem;
+        text-align: right;
+        float: left;
+        font-size: 0.32rem;
+        line-height: 0.72rem;
+        color: #999999;
+        background: #e8e8e8;
+        position: relative;
+        &:last-child{
+          width: 2.15rem;
+        }
+        &:before{
+          content:'';
+          position: absolute;
+          right: -0.3rem;
+          z-index: 1;
+          width: 0;
+          height: 0;
+          border-top: 0.36rem solid transparent;
+          border-left: 0.3rem solid #69625e;
+          border-bottom: 0.36rem solid transparent;
+        }
+        &:after{
+          content:'';
+          position: absolute;
+          right: -0.28rem;
+          width: 0;
+          height: 0;
+          z-index: 2;
+          border-top: 0.36rem solid transparent;
+          border-left: 0.3rem solid #e8e8e8;
+          border-bottom: 0.36rem solid transparent;
+        }
+        &:first-child{
+          border-radius: 5px 0 0 5px;
+        }
+      }
+    }
+    .noteEditHeadOne{
+      li{
+        &:first-child{
+          color:#fff;
+          background: #1ebc21;
+          &:after{
+            border-left: 0.3rem solid #1ebc21;
+          }
+        }
+      }
+    }
+    .noteEditHeadTwo{
+      li{
+        &:first-child{
+          background: #a5e1a6;
+          color: #333333;
+          &:after{
+            border-left: 0.3rem solid #a5e1a6;
+          }
+        }
+        &:nth-child(2){
+          color:#fff;
+          background: #1ebc21;
+          &:after{
+            border-left: 0.3rem solid #1ebc21;
+          }
+        }
+      }
+    }
+    .noteEditHeadThree{
+      li{
+        &:first-child{
+          background: #a5e1a6;
+          color: #333333;
+          &:after{
+            border-left: 0.3rem solid #a5e1a6;
+          }
+        }
+        &:nth-child(2){
+          background: #a5e1a6;
+          color: #333333;
+          &:after{
+            border-left: 0.3rem solid #a5e1a6;
+          }
+        }
+        &:nth-child(3){
+          color:#fff;
+          background: #1ebc21;
+          &:after{
+            border-left: 0.3rem solid #1ebc21;
+          }
+        }
+      }
+    }
+  }
+
+  /*主体样式*/
+  .NoteEditBody{
+    width: 100%;
+
+    /*设计封面*/
+    .designCoverBox{
+      margin: 0 auto;
+      /*封面样式*/
+      .designCover{
+        margin: 0 auto;
+        position: relative;
+        .textStyle{
+          background: #e6e6e6;
+        }
+        .btnBoxBgBox{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: rgba(0,0,0,0.4);
+          .btnBoxBg{
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            top: 50%;
+            margin-top: -0.5rem;
+            left: 50%;
+            margin-left: -0.5rem;
+            .btnBox{
+              width: 100%;
+              height: 0.36rem;
+              line-height: 0.36rem;
+              &:first-child{
+                margin-bottom: 0.28rem;
+              }
+              img{
+                float: left;
+                width: 0.36rem;
+                height: 0.36rem;
+              }
+              span{
+                float: right;
+                color:#fff;
+                font-size: 0.28rem;
+              }
+              input{
+                position: absolute;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 0.36rem;
+                opacity: 0;
+                z-index: 10;
+              }
+            }
+          }
+        }
+        .btnBoxBgOne{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: url("http://static.timeface.cn/resource/suolvpic/lADOZO7J380Cb80Cbw_623_623.jpg") no-repeat center;
+          background-size: cover;
+          input{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 10;
+          }
+        }
+        .btnBoxBgTwo{
+          opacity: 0;
+        }
+      }
+      /*按钮样式*/
+      .designCoverFoot{
+        width: 6.3rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.15rem;
+        bottom: 0.3rem;
+        font-size: 0.32rem;
+        color:#fff;
+        height: 0.8rem;
+        ul{
+          li{
+            background: transparent;
+            border: 2px solid #1ebc21;
+            width: 2.96rem;
+            height: 0.76rem;
+            border-radius: 5px;
+            float: left;
+            line-height: 0.76rem;
+            text-align: center;
+            &:last-child{
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    /*设计插页*/
+    .designInsertBg{
+      .notNeedInsertBg{
+        position: absolute;
+        left: 0;
+        top: 1.3rem;
+        width: 100%;
+        z-index: 888;
+        background: transparent;
+      }
+      /*插页设置*/
+      .insertSetBg{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background: rgba(0,0,0,0.5);
+        .insertSetBox{
+          width: 100%;
+          height: 3.75rem;
+          overflow: hidden;
+          background: #fff;
+          position: absolute;
+          bottom: 0;
+          .insertSetHead{
+            font-size: 0.28rem;
+            color:#333333;
+            line-height: 0.9rem;
+            height: 0.9rem;
+            padding: 0 0.3rem;
+            .popupHeadBtn{
+              float: right;
+              width: 0.9rem;
+              height:0.9rem;
+              line-height:0.9rem;
+              text-align: center;
+              background: url("../../notePreview/images/close.png") no-repeat center;
+              background-size: 0.32rem 0.32rem;
+            }
+          }
+          ul{
+            height: 2.85rem;
+            width: 100%;
+            padding: 0 0.06rem;
+            li{
+              width: 2.16rem;
+              height: 2.25rem;
+              float: left;
+              margin: 0.15rem;
+              position: relative;
+              img{
+                width: 2.10rem;
+                height: 2.19rem;
+                margin: 0.02rem;
+                border: 1px solid #d0d0d0;
+                border-radius: 5px;
+              }
+              .insertSetSelect{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2.16rem;
+                height: 2.25rem;
+                background: url("../images/insertSetSelect.png") no-repeat center;
+                background-size: 2.16rem 2.25rem;
+              }
+            }
+          }
+        }
+      }
+      /*插页显示区域*/
+      .designInsertBody{
+        width: 5.951rem;
+        margin: 0 auto;
+        .designInsertBox{
+          width: 5.951rem;
+          background: #fff;
+          position: relative;
+          .notNeedInsert{
+            width: 100%;
+            height: 100%;
+            z-index: 500;
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            span{
+              position: absolute;
+              top:50%;
+              margin-top:-0.3rem;
+              text-align: center;
+              line-height: 0.6rem;
+              color:#fff;
+              font-size: 0.3rem;
+              width: 100%;
+            }
+          }
+          .designInsert{
+            margin: 0 auto;
+            position: relative;
+            .insertBorder{
+              border-radius: 50%;
+            }
+            .textStyle{
+              img{
+                border: 1px dashed #fff;
+                background-color: #e6e6e6;
+              }
+            }
+            .btnBoxBgBox{
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              background: rgba(0,0,0,0.4);
+              .btnBoxBg{
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                top: 50%;
+                margin-top: -0.5rem;
+                left: 50%;
+                margin-left: -0.5rem;
+                .btnBox{
+                  width: 100%;
+                  height: 0.36rem;
+                  line-height: 0.36rem;
+                  &:first-child{
+                    margin-bottom: 0.28rem;
+                  }
+                  img{
+                    float: left;
+                    width: 0.36rem;
+                    height: 0.36rem;
+                  }
+                  span{
+                    float: right;
+                    color:#fff;
+                    font-size: 0.28rem;
+                  }
+                  input{
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    width: 100%;
+                    height: 0.36rem;
+                    opacity: 0;
+                    z-index: 10;
+                  }
+                }
+              }
+            }
+            .btnBoxBgOne{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background: url("http://static.timeface.cn/resource/suolvpic/lADOZO7J380Cb80Cbw_623_623.jpg") no-repeat center;
+              background-size: cover;
+              input{
+                position: absolute;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                z-index: 10;
+              }
+            }
+            .btnBoxBgTwo{
+              opacity: 0;
+            }
+          }
+        }
+        .designInsertPage{
+          width: 2.1rem;
+          height: 0.4rem;
+          margin: 0.3rem auto;
+          .designInsertPageBody{
+            width: 0.9rem;
+            margin: 0 0.38rem;
+            text-align: center;
+            font-size: 0.28rem;
+            color:#fff;
+            line-height: 0.4rem;
+            height: 0.4rem;
+            float: left;
+          }
+          .designInsertPageLeft{
+            width: 0.22rem;
+            height: 0.4rem;
+            background: url("../images/arrowLeft.png") no-repeat center;
+            background-size: 0.22rem 0.4rem;
+            float: left;
+          }
+          .designInsertPageRight{
+            width: 0.22rem;
+            height: 0.4rem;
+            background: url("../images/arrowRight.png") no-repeat center;
+            background-size: 0.22rem 0.4rem;
+            float: right;
+          }
+        }
+      }
+      .designInsertFoot{
+        width: 6.96rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.48rem;
+        bottom: 0.5rem;
+        ul{
+          li{
+            width: 2.0rem;
+            height: 0.76rem;
+            border-radius: 5px;
+            border: 2px solid #1ebc21;
+            line-height: 0.76rem;
+            text-align: center;
+            font-size: 0.28rem;
+            color:#fff;
+            float:left;
+            margin-right: 0.3rem;
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+          .designInsertFootNot{
+            background: #bbbbbb;
+            border:2px solid #bbbbbb;
+          }
+        }
+      }
+    }
+
+    /*选择纸张*/
+    .SelectPaperBox{
+      .SelectPaper{
+        width: 6.1rem;
+        height: 8.8rem;
+        margin: 0 auto;
+        ul{
+          li{
+            width: 2.81rem;
+            height: 4.3rem;
+            float: left;
+            margin-right: 0.48rem;
+            position: relative;
+            img{
+              width: 2.75rem;
+              height: 3.7rem;
+              margin: 0.03rem;
+              float: left;
+            }
+            p{
+              text-align: center;
+              line-height: 0.64rem;
+              font-size: 0.28rem;
+              color:#fff;
+              height: 0.64rem;
+              width: 100%;
+              float: left;
+            }
+            &:nth-child(even){
+              margin-right: 0;
+            }
+            .paperSelect{
+              position: absolute;
+              width: 2.81rem;
+              height: 3.76rem;
+              background: url("../images/paperActive.png") no-repeat center;
+              background-size: 2.81rem 3.76rem;
+            }
+          }
+        }
+      }
+      .SelectPaperFoot{
+        width: 6.1rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        letter-spacing: 0.15rem;
+        font-size: 0.32rem;
+        color:#fff;
+        background: #1ebc21;
+        border-radius: 5px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        bottom: 0.3rem;
+      }
+    }
+  }
+
+  /*编辑字体样式*/
+  #ecit_text_dialog{
+    .weui_mask{
+      z-index: 30;
+    }
+    .weui_dialog{
+      z-index: 40;
+      background: #ffffff;
+      .weui_dialog_bd{
+        padding: 0px;
+      }
+      .weui-cell__bd{
+        textarea{
+          width: 100%;
+          border: 1px solid #cccccc;
+          padding: .05rem;
+          font-size: 0.24rem;
+        }
+        .text_tip{
+          text-align: left;
+          font-size: .24rem;
+          color: #999999;
+          padding-top: .1rem;
+          padding-left: 5%;
+        }
+      }
+      .weui_dialog_ft{
+        .weui-btn_primary{
+          width: 3.05rem;
+          height: .8rem;
+          background: #1ebc21;
+          display: block;
+          flex: inherit;
+          color: #fff;
+          margin: 0rem auto;
+          margin-bottom: .5rem;
+          font-size: .32rem;
+          border-radius: .1rem;
+
+        }
+        &:after{
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+/*弹窗样式*/
+.popupBoxBg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0,0,0,0.5);
+  .popupBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3.35rem;
+    width: 100%;
+    background: #fff;
+    .popupHead{
+      font-size: 0.28rem;
+      color:#333333;
+      line-height: 0.9rem;
+      height: 0.9rem;
+      padding: 0 0.3rem;
+      .popupHeadBtn{
+        float: right;
+        width: 0.9rem;
+        height:0.9rem;
+        line-height:0.9rem;
+        text-align: center;
+        background: url("../../notePreview/images/close.png") no-repeat center;
+        background-size: 0.32rem 0.32rem;
+      }
+    }
+    .popupBody{
+      width: 7.2rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-left: 0.3rem;
+      ul{
+        height: 2.45rem;
+        li{
+          width: 1.36rem;
+          height: 1.86rem;
+          float: left;
+          margin-right: 0.2rem;
+          position: relative;
+          img{
+            width: 1.3rem;
+            height: 1.8rem;
+            margin: 0.02rem;
+            border: 1px solid #d0d0d0;
+            border-radius: 5px;
+          }
+          .listDataSelect{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1.36rem;
+            height: 1.86rem;
+            background: url("../images/listDataActive.png") no-repeat center;
+            background-size: 1.36rem 1.86rem;
+          }
+        }
+      }
+    }
+  }
+}

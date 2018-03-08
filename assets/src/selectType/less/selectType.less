@@ -1,0 +1,104 @@
+
+.typeLayout{
+  padding: 0 0.25rem 0;
+  .showNone{
+    display:none;
+  }
+  .bookType{
+    padding-top:0.3rem;
+    .typeImage{
+      width:7rem;
+      height:auto;
+      vertical-align: middle;
+      margin-top: 0.25rem;
+      &:nth-child(5n+1){
+        margin-top: 0;
+      }
+    }
+  }
+  .currentType{
+    height:1rem;
+    line-height:1rem;
+    border-bottom:1px #e5e5e5 solid;
+    .currentTypeText{
+      font-size: 0.35rem;
+      color:#c1baba;
+      float:left;
+    }
+    .currentTypeName{
+      font-size:0.38rem;
+      color:#1ebc21;
+      float:left;
+      margin-left:0.3rem;
+    }
+  }
+
+  .sizes{
+    font-size:0.35rem;
+    height: 1rem;
+    line-height: 1.1rem;
+  }
+  .sizeLayout{
+    height: 0.75rem;
+    width: 7rem;
+    .size01{
+      width: 3rem;
+      height: 0.7rem;
+      border-radius: 5px;
+      border: 1px #ededed solid;
+      color: #585858;
+      text-align: center;
+      line-height: 0.7rem;
+      font-size: 0.35rem;
+      float:left;
+      &:nth-child(n+2){
+        margin-left:0.2rem;
+      }
+    }
+    .selected{
+      border: 1px #1ebc21 solid;
+      color: #1ebc21;
+    }
+  }
+  .bindings{
+    font-size:0.35rem;
+    height: 1rem;
+    line-height: 1.1rem;
+  }
+  .binding-layout{
+    width:1.8rem;
+    height:1.8rem;
+    position:relative;
+    .bingingImg{
+      width:1.8rem;
+      height:1.8rem;
+      vertical-align:middle;
+    }
+    .selectBg{
+      height: 1.8rem;
+      width: 1.8rem;
+      position: absolute;
+      .selectIcon{
+        position: absolute;
+        left:0.7rem;
+      }
+    }
+  }
+  .bingingText{
+    font-size:0.35rem;
+    width:1.8rem;
+    text-align:center;
+  }
+
+  .nextStep{
+    width:6.5rem;
+    height:0.8rem;
+    background-color:#1ebc21;
+    border-radius:5px;
+    line-height:0.8rem;
+    text-align:center;
+    color:#fff;
+    font-size:0.35rem;
+    margin: 0.5rem auto 0;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>戴光强养生台历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <script>window.__INITIALSTATE__=<%-JSON.stringify(initialState)%></script>
+    <script>
+      window.wxConfig = {};
+      window.wxConfig=<%-JSON.stringify(initialState.wxConfig || {}) %> ;
+    </script>
+</head>
+<body>
+<div id="app">
+</div>
+<%- LIBJS %>
+<%- SUI_MOBILE_JS %>
+<!-- 微信授权代码 -->
+<%- WECHAT_JS %>
+<!-- 百度统计代码-->
+<%- BAIDU_CODE  %>
+<script src="/calendar/gtqIndex.entry.js"></script>
+<%- WebViewJS %></body>
+</html>
